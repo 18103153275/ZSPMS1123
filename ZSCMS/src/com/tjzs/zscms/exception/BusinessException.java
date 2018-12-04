@@ -9,7 +9,7 @@ public class BusinessException extends Exception {
 		private String errMsg;// 异常信息
 		private int errCode;// 异常编码
 
-		public String getErrMsg() {
+		public String getErrMsg() { 
 			return errMsg;
 		}
 
