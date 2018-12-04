@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ZSCMS</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 注意：一旦修改了web.xml中的任何内容，那么必须重新启动服务器 -->
+	<!-- 配置登录Servlet -->
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 用户查询所有 -->
+	<servlet>
+		<servlet-name>userlist</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.QueryUserListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userlist</servlet-name>
+		<url-pattern>/userlist.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 部门信息 -->
+	<servlet>
+		<servlet-name>dept</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.DeptServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dept</servlet-name>
+		<url-pattern>/dept.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 用户新增 -->
+	<servlet>
+		<servlet-name>useradd</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.UserAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>useradd</servlet-name>
+		<url-pattern>/useradd.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 通过id查询，进行修改 -->
+	<servlet>
+		<servlet-name>userget</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.UserGetByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userget</servlet-name>
+		<url-pattern>/userget.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 用户修改 -->
+	<servlet>
+		<servlet-name>userupdate</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.UserUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userupdate</servlet-name>
+		<url-pattern>/userupdate.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 用户删除 -->
+	<servlet>
+		<servlet-name>userdelect</servlet-name>
+		<servlet-class>com.tjzs.zscms.servlet.UserDelectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userdelect</servlet-name>
+		<url-pattern>/userdelect.do</url-pattern>
+	</servlet-mapping>
+<!-- 快报查询所有 -->
+	<servlet>
+		<servlet-name>Tadvertlist</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tadvert.servlet.QueryTadvertListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tadvertlist</servlet-name>
+		<url-pattern>/Tadvertlist.do</url-pattern>
+	</servlet-mapping>
+	<!-- 快报新增 -->
+	<servlet>
+		<servlet-name>Tadvertadd</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tadvert.servlet.TadvertAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tadvertadd</servlet-name>
+		<url-pattern>/Tadvertadd.do</url-pattern>
+	</servlet-mapping>
+	<!-- 快报删除 -->
+	<servlet>
+		<servlet-name>Tadvertdelete</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tadvert.servlet.TadvertDelectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tadvertdelete</servlet-name>
+		<url-pattern>/Tadvertdelete.do</url-pattern>
+	</servlet-mapping>
+	<!-- 快报修改 -->
+	<servlet>
+		<servlet-name>Tadvertupdate</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tadvert.servlet.TadvertUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tadvertupdate</servlet-name>
+		<url-pattern>/Tadvertupdate.do</url-pattern>
+	</servlet-mapping>
+	<!-- 快报id修改 -->
+	<servlet>
+		<servlet-name>Tadvertget</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tadvert.servlet.TadvertGetByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tadvertget</servlet-name>
+		<url-pattern>/Tadvertget.do</url-pattern>
+	</servlet-mapping>
+	<!-- 文章查询所有 -->
+	<servlet>
+		<servlet-name>Tarticlelist</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tarticle.servlet.QueryTarticleListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tarticlelist</servlet-name>
+		<url-pattern>/Tarticlelist.do</url-pattern>
+	</servlet-mapping>
+	<!-- 文章删除 -->
+	<servlet>
+		<servlet-name>Tarticledelete</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tarticle.servlet.TarticleDelectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tarticledelete</servlet-name>
+		<url-pattern>/Tarticledelete.do</url-pattern>
+	</servlet-mapping>
+	<!-- 文章新增 -->
+	<servlet>
+		<servlet-name>Tarticleadd</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tarticle.servlet.TarticleAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tarticleadd</servlet-name>
+		<url-pattern>/Tarticleadd.do</url-pattern>
+	</servlet-mapping>
+	<!-- id修改 -->
+	<servlet>
+		<servlet-name>Tarticleget</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tarticle.servlet.TarticleGetByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tarticleget</servlet-name>
+		<url-pattern>/Tarticleget.do</url-pattern>
+	</servlet-mapping>
+	<!-- 文章修改 -->
+	<servlet>
+		<servlet-name>Tarticleupdate</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tarticle.servlet.TarticleUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tarticleupdate</servlet-name>
+		<url-pattern>/Tarticleupdate.do</url-pattern>
+	</servlet-mapping>
+	  <!-- 文章调用栏目信息 -->
+  <servlet>
+  	<servlet-name>tchannle</servlet-name>
+  	<servlet-class>com.tjzs.zscms.Tchannel.servlet.TchannelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>tchannle</servlet-name>
+  	<url-pattern>/tchannle.do</url-pattern>
+  </servlet-mapping>
+  	<!-- 查询栏目-->
+	<servlet>
+		<servlet-name>channelist</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.QueryChannelservlt</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channelist</servlet-name>
+		<url-pattern>/channelist.do</url-pattern>
+	</servlet-mapping>
+	
+  <!-- 删除栏目 -->
+	<servlet>
+		<servlet-name>channeldelete</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.DelectChannelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channeldelete</servlet-name>
+		<url-pattern>/channeldelete.do</url-pattern>
+	</servlet-mapping>
+  
+  	<!-- 通过id获取栏目 -->
+	<servlet>
+		<servlet-name>channelget</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.QueryChannelByIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channelget</servlet-name>
+		<url-pattern>/channelget.do</url-pattern>
+	</servlet-mapping>
+  	<!-- 配置修改栏目 -->
+	<servlet>
+		<servlet-name>channelupdate</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.UpdateChannelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channelupdate</servlet-name>
+		<url-pattern>/channelupdate.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 配置上级栏目-->
+	<servlet>
+		<servlet-name>channelpid</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.ChannPidServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channelpid</servlet-name>
+		<url-pattern>/channelpid.do</url-pattern>
+	</servlet-mapping>
+	
+  <!-- 栏目新增 -->
+  	<servlet>
+		<servlet-name>channeladd</servlet-name>
+		<servlet-class>com.tjzs.zscms.Tchannel.servlet.AddChannelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>channeladd</servlet-name>
+		<url-pattern>/channeladd.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 配置验证码 -->
+	<servlet>
+		<servlet-name>kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+		<!-- 图片的宽度 -->
+		<init-param>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>80</param-value>
+		</init-param>
+		<!-- 图片的高度 -->
+		<init-param>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>30</param-value>
+		</init-param>
+		<!-- 图片的边框 -->
+		<init-param>
+			<param-name>kaptcha.image.border</param-name>
+			<param-value>no</param-value>
+		</init-param>
+		<!-- 字体 -->
+		<init-param>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>28</param-value>
+		</init-param>
+		<!-- 字体的水纹样式 -->
+		<init-param>
+			<param-name>kaptcha.obscurificator.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.FishEyeGimpy</param-value>
+		</init-param>
+		<!-- 验证码的长度 -->
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>1</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>kaptcha</servlet-name>
+		<url-pattern>/kaptcha.jsp</url-pattern>
+	</servlet-mapping>
+
+	<!-- 配置过滤器 -->
+	<filter>
+		<filter-name>filter</filter-name>
+		<filter-class>com.tjzs.zscms.filter.FilterDemo</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filter</filter-name>
+		<!-- /*表示过滤所有的请求和响应的编码格式（所有的文件） -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 配置拦截器 -->
+	<filter>
+		<filter-name>urlfilter</filter-name>
+		<filter-class>com.tjzs.zscms.filter.URLFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>urlfilter</filter-name>
+		<!-- /*表示过滤所有的请求和响应的编码格式（所有的文件） -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
